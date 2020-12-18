@@ -1,0 +1,1065 @@
+// ファイル読み込み
+@import 'reset';
+@import 'config';
+
+/* 全ページ共通デザイン =================================================/
+/* header ====================================*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 70;
+  &__left {
+    position: absolute;
+    top: 3rem;
+    left: 5.8rem;
+    width: 26rem;
+    z-index: 50;
+    @include tab {
+      left: $padding-tab;
+      width: 19rem;
+    }
+    @include sp {
+      left: $padding-sp;
+    }
+    fill: black;
+  }
+  &__logo{
+  }
+  &__right {
+    position: absolute;
+    top: 3rem;
+    right: 5.8rem;
+    z-index: 100;
+    @include tab {
+      right: $padding-tab;
+    }
+    @include sp {
+      right: $padding-sp;
+    }
+  }
+  &__menu {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__hamburger {
+    position: relative;
+  }
+  &__hamburger-top {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0rem;
+    left: -3rem;
+    width: 2.2rem;
+    height: .2rem;
+    background-color: white;
+    border-radius: .1rem;
+    transition: all .3s;
+  }
+  &__hamburger-middle {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: .5rem;
+    left: -3rem;
+    width: 2.2rem;
+    height: .2rem;
+    background-color: white;
+    border-radius: .1rem;
+    transition: all .3s;
+  }
+  &__hamburger-bottom {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: -3rem;
+    width: 2.2rem;
+    height: .2rem;
+    background-color: white;
+    border-radius: .1rem;
+    transition: all .3s;
+  }
+  &__hamburger-text{
+    font-family: $font-family;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: .005em;
+    // line-height: 3rem;
+    color: white;
+  }
+}
+
+// クリック時のハンバーガーメニューの変化
+.is-active-top {
+  transform: translateY(.5rem) rotate(-45deg);
+}
+
+.is-active-middle {
+  display: none;
+}
+
+.is-active-bottom {
+  transform: translateY(-.5rem) rotate(45deg);
+}
+
+.hamburger-background {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #222, $alpha: .6);
+  z-index: 50;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 52rem;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #222, $alpha: .95);
+  z-index: 90;
+  text-align: center;
+  &__icon {
+    margin-top: 18.2rem;
+    margin-bottom: 4rem;
+  }
+  &__list {
+    text-align: center;
+  }
+  &__item {
+    padding-bottom: 3rem;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: .068em;
+    color: white;
+  }
+}
+
+/* footer =====================================*/
+.footer {
+  background-color: #525252;
+  &__text {
+    text-align: center;
+    padding: 1.8rem 0;
+    font-family: $font-family;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .015em;
+    color: white;
+  }
+}
+
+/* トップページのデザイン =================================================/
+/* fv =========================================*/
+.fv {
+  height: 100vh;
+}
+
+.fv-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 86%;
+    z-index: 50;
+    content: '';
+    background-image: url("../img/kv-img@2x-min.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include tab {
+      width: 78%;
+    }
+    @include sp {
+      width: 76%;
+    }
+  }
+  &__color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    width: 54%;
+    height: 100%;
+    content: '';
+    background-color: #222;
+    @include tab{
+      width: 73%;
+    }
+    @include sp {
+      width: 75%;
+    }
+  }
+}
+
+.fv-main-copy {
+  position: absolute;
+  top: 16rem;
+  right: 20rem;
+  z-index: 60;
+  @include tab {
+    top: 26%;
+    right: 8rem;
+  }
+  @include sp {
+    top: 26%;
+    right: 2rem;
+  }
+  &__sub {
+    padding-bottom: 1rem;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0em;
+    color: white;
+    @include tab {
+      font-size: 1.6rem;
+      letter-spacing: .063rem;
+    }
+  }
+  &__main {
+    font-family: $font-family;
+    font-size: 7.2rem;
+    font-weight: 800;
+    letter-spacing: 0em;
+    line-height: 8.6rem;
+    color: white;
+    @include tab {
+      font-size: 5.6rem;
+      letter-spacing: .063em;
+      line-height: 5.3rem;
+    }
+  }
+}
+
+/* about =========================================*/
+.about {
+  width: 100%;
+  padding-top: 12rem;
+  @include tab {
+    padding-top: 8rem;
+  }
+  &__bg {
+    position: relative;
+    content: '';
+    max-width: $max-width-pc;
+    height: 60rem;
+    margin: 0 auto;
+    background-image: url('../img/about-img@2x-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include tab {
+      max-width: none;
+      height: 48rem;
+      margin: 0;
+    }
+    @include sp {
+      height: 54rem;
+      padding-top: 5rem;
+    }
+  }
+  &__content {
+    position: absolute;
+    width: 59rem;
+    top: 11rem;
+    left: 5rem;
+    background-color: white;
+    @include tab {
+      top: 8rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    @include sp {
+      position: static;
+      width: auto;
+      transform: none;
+      margin: 0 $padding-sp;
+    }
+  }
+}
+
+.about-content {
+  &__title {
+    padding: 5rem 0 3rem 3rem;
+    @include title;
+    @include tab {
+      padding-top: 4rem;
+    }
+    @include sp {
+      padding-top: 5rem;
+    }
+  }
+  &__text {
+    padding: 0 3rem 5.4rem;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 3.2rem;
+    color: $color-black;
+    // @include long-style;
+    @include sp {
+      padding-bottom: 8rem;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+    }
+  }
+  &__btn {
+    margin: 0 0 5rem 3rem;
+    @include btn-black(1.2rem);
+    @include tab {
+      margin-bottom: 4rem;
+    }
+    @include sp {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+/* worksとcultureにまたがるwrapper ==============*/
+.over-section-wrapper {
+  width: 100%;
+  margin-top: -10rem;
+  padding-top: 18rem;
+  background-color: $color-gray-bg;
+  @include tab {
+    margin-top: 0;
+    padding-top: 6rem;
+  }
+  @include sp {
+    padding-top: 4rem;
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: $max-width-pc;
+    margin: 0 auto;
+    @include tab {
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+/* works =======================================*/
+.works {
+  width: 47%;
+  @include tab {
+    width: 100%;
+    padding: $padding-tab;
+  }
+  @include sp {
+    padding: 0 $padding-sp;
+  }
+  &__title {
+    padding-bottom: 3rem;
+    @include title;
+  }
+  &__img {
+    width: 100%;
+    max-width: 52rem;
+  }
+  &__text {
+    padding: 2.8rem 0;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    color: $color-black;
+  }
+  &__btn {
+    margin-bottom: 6rem;
+    @include btn-black(1.2rem);
+    @include tab {
+      margin-bottom: 8rem;
+    }
+    @include sp {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+/* culture =======================================*/
+.culture {
+  width: 47%;
+  @include tab {
+    width: 100%;
+    padding: $padding-tab;
+  }
+  @include sp {
+    padding: 0 $padding-sp;
+  }
+  &__title {
+    padding-bottom: 3rem;
+    @include title;
+  }
+  &__img {
+    width: 100%;
+    max-width: 52rem;
+  }
+  &__text {
+    padding: 2.8rem 0;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    color: $color-black;
+  }
+  &__btn {
+    margin-bottom: 6rem;
+    @include btn-black(1.2rem);
+    @include tab {
+      margin-bottom: 8rem;
+    }
+    @include sp {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+/* latest topics ==================================*/
+.latest-topics {
+  max-width: $max-width-pc;
+  margin: 0 auto;
+  padding-top: 6rem;
+  @include tab {
+    margin: 0;
+    padding: 4rem $padding-tab 0;
+  }
+  @include sp {
+    padding: 4rem $padding-sp 0;
+  }
+  &__title {
+    padding-bottom: 3rem;
+    @include title;
+  }
+  &__list {
+    width: 70rem;
+    // 右寄せに
+    // widthが100%で効いていると効果なし
+    margin-left: auto;
+    @include tab {
+      width: 100%;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 3rem;
+  }
+  &__date {
+    padding-bottom: .9rem;
+    font-family: $font-family;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .015em;
+    color: #CECECE;
+  }
+  &__topic-title {
+    padding-bottom: 1rem;
+    font-family: $font-family;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: .004em;
+    @include sp {
+      font-size: 1.2rem;
+      letter-spacing: .068em;
+    }
+  }
+  &__btn {
+    display: block;
+    @include btn-black(1.2rem);
+    margin: 0 0 6rem auto;
+    @include tab {
+      margin: 0 0 4rem;
+    }
+  }
+}
+
+/* contact =======================================*/
+.contact {
+  padding-top: 6rem;
+  background-color: $color-gray-bg;
+  @include tab {
+    padding: 4rem 0 0 $padding-tab;
+  }
+  @include sp {
+    padding: 4rem $padding-sp 0;
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: $max-width-pc;
+    margin: 0 auto;
+    padding-bottom: 12rem;
+    @include tab {
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      max-width: 58rem;
+      margin: 0;
+      padding-bottom: 8rem;
+    }
+    @include sp {
+      padding-bottom: 4rem;
+    }
+  }
+  &__content {
+    width: 40%;
+    padding-top: 7.2rem;
+    @include tab  {
+      width: 100%;
+      max-width: 52rem;
+      padding-top: 3rem;
+    }
+  }
+  &__title {
+    padding-bottom: 3rem;
+    @include title;
+  }
+  &__text {
+    padding-bottom: 6rem;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 3.2rem;
+    @include tab {
+      padding-bottom: 3rem;
+    }
+    @include sp {
+      padding-bottom: 6rem;
+    }
+  }
+  &__btn {
+    @include btn-black(1.2rem);
+  }
+  &__img {
+    width: 100%;
+    @include tab {
+      max-width: 52rem;
+    }
+  }
+}
+
+/* Aboutページのデザイン =================================================*/
+/* about fv =======================================*/
+.about-fv {
+  height: 46.4rem;
+  @include tab {
+    height: 61.5rem;
+  }
+  @include sp {
+    height: 44.9rem;
+  }
+}
+
+.about-fv-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 86%;
+    z-index: 50;
+    content: '';
+    background-image: url("../img/heading-img@2x-min.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include tab {
+      width: 78%;
+    }
+    @include sp {
+      width: 76%;
+    }
+  }
+  &__color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    width: 54%;
+    height: 100%;
+    content: '';
+    background-color: #222;
+  }
+}
+
+.about-fv-main-copy {
+  position: absolute;
+  top: 16rem;
+  right: 17rem;
+  z-index: 60;
+  @include tab {
+    top: 22rem;
+    right: 9.8rem;
+  }
+  @include sp {
+    top: 15rem;
+    right: 3rem;
+  }
+  &__main {
+    font-family: $font-family;
+    font-size: 7.2rem;
+    font-weight: 800;
+    letter-spacing: 0em;
+    line-height: 8.6rem;
+    color: white;
+    @include tab {
+      font-size: 5.2rem;
+      letter-spacing: .063em;
+    }
+  }
+  &__sub {
+    padding-bottom: 1rem;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: white;
+    @include tab {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/* vision =======================================*/
+.vision {
+  max-width: $max-width-pc;
+  margin: 0 auto;
+  padding: 12rem 0 0 22.2rem;
+  @include tab {
+    padding: 8rem 0 0 15rem;
+  }
+  @include sp {
+    padding: 8rem $padding-sp 0;
+  }
+  &__title {
+    padding-bottom: 2.5rem;
+    @include title;
+    @include sp {
+      padding-bottom: 3.2rem;
+    }
+  }
+  &__text-big {
+    padding-bottom: 2.7rem;
+    font-family: $font-family;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: .005em;
+    color: $color-black;
+    @include tab {
+      padding-bottom: 3.2rem;
+      font-weight: 400;
+    }
+  }
+  &__text {
+    padding-bottom: 12rem;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 3.2rem;
+    color: $color-black;
+    @include tab {
+      padding-bottom: 8rem;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+/* ceo message =======================================*/
+.ceo-message {
+  max-width: $max-width-pc;
+  margin: 0 auto;
+  @include tab {
+    margin: 0;
+    padding: 0 $padding-tab;
+  }
+  @include sp {
+    padding: 0;
+  }
+  &__img {
+    width: 42rem;
+    z-index: 80;
+    @include tab {
+      width: 32rem;
+    }
+    @include sp {
+      width: auto;
+      margin-right: 3.5rem;
+    }
+  }
+  &__content {
+    z-index: 50;
+    margin: -13.8rem 0 0 33rem;
+    padding: 12rem 18.5rem 0;
+    background-color: $color-gray-bg;
+    @include tab {
+      margin: -8.5rem 0 0 21.3rem;
+      padding: 10.9rem 4rem 0;
+    }
+    @include sp {
+      margin: -10rem $padding-sp 0;
+      padding: 12.6rem 3rem 0;
+    }
+  }
+  &__title {
+    padding-bottom: 3rem;
+    @include title;
+  }
+  &__text {
+    padding-bottom: 9rem;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 3.2rem;
+    color: $color-black;
+    @include tab {
+      line-height: 2.8rem;
+      padding-bottom: 7.8rem;
+    }
+    @include sp {
+      padding-bottom: 19rem;
+    }
+  }
+}
+
+/* company =======================================*/
+.company {
+  max-width: $max-width-pc;
+  margin: 0 auto;
+  padding-top: 12rem;
+  @include tab {
+    padding: 8.2rem $padding-tab 0;
+  }
+  @include sp {
+    padding: 8.2rem $padding-sp 0;
+  }
+  &__title {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #DDDDDD;
+    @include title;
+  }
+  &__text {
+    width: 72%;
+    margin-left: auto;
+    @include tab {
+      width: auto;
+      padding-left: 6rem;
+    }
+    @include sp {
+      padding-left: 0;
+    }
+  }
+}
+
+.company-info {
+  padding-bottom: 4rem;
+  &__item {
+    display: flex;
+    padding: 1.7rem 0 1.8rem 0;
+    border-bottom: 1px solid #DDDDDD;
+  }
+  &__field {
+    width: 20%;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: .004em;
+    color: $color-black;
+  }
+  &__record {
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .004em;
+    color: $color-black;
+  }
+  &__map {
+    padding-bottom: 12rem;
+  }
+  &__img {
+    width: 100%;
+    @include sp {
+      height: 47rem;
+      object-fit: cover;
+      object-position: 60% 50%;
+    }
+  }
+}
+
+/* Contactページのデザイン ==============================================*/
+/* contact fv =======================================*/
+.contact-fv {
+  height: 46.4rem;
+  @include tab {
+    height: 61.5rem;
+  }
+  @include sp {
+    height: 36.5rem;
+  }
+}
+
+.contact-fv-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 38.7rem;
+    z-index: 50;
+    content: '';
+    background-image: url("../img/heading-img_contact@2x-min.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include tab {
+      width: 78%;
+      height: 52.9rem;
+    }
+    @include sp {
+      width: 76%;
+      height: 27rem;
+    }
+  }
+  &__color {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    width: 54%;
+    height: 100%;
+    content: '';
+    background-color: #222;
+  }
+}
+
+.contact-fv-main-copy {
+  position: absolute;
+  top: 16rem;
+  right: 17rem;
+  z-index: 60;
+  @include tab {
+    top: 13rem;
+    right: 5rem;
+  }
+  @include sp {
+    top: 12.9rem;
+    right: 2.1rem;
+  }
+  &__main {
+    font-family: $font-family;
+    font-size: 7.2rem;
+    font-weight: 800;
+    letter-spacing: 0em;
+    line-height: 8.6rem;
+    color: white;
+    @include tab {
+      font-size: 5.2rem;
+      letter-spacing: .063em;
+    }
+  }
+  &__sub {
+    padding-bottom: 1rem;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0em;
+    color: white;
+    @include tab {
+      font-size: 1.6rem;
+    }
+    @include sp {
+      text-align: right;
+    }
+  }
+}
+
+/* contact form ======================*/
+.contact-form {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-top: 12rem;
+  @include tab {
+    box-sizing: content-box;
+    padding: 13.5rem 1.5rem 0;
+  }
+  @include sp {
+    padding-top: 8rem;
+  }
+  &__intro {
+    padding-bottom: 5.2rem;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .004em;
+    line-height: 2.4rem;
+    color: $color-black;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto 12rem;
+    @include btn-black(1.4rem);
+    @include tab {
+      margin-bottom: 19.7rem;
+    }
+    @include sp {
+      margin-bottom: 8rem;
+    }
+  }
+}
+
+.form-list {
+  &__item {
+    padding-bottom: 3.7rem;
+  }
+  &__label {
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .004em;
+    color: $color-black;
+    &--must {
+      position: relative;
+      vertical-align: middle;
+      font-family: $font-family-about;
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: .004em;
+      color: $color-black;
+      &::after {
+        content: '必須';
+        display: inline-block;
+        position: absolute;
+        width: 3.4rem;
+        height: 1.8rem;
+        margin-left: 2rem;
+        background-color: $color-black;
+        text-align-last: center;
+        font-family: $font-family-about;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: .004em;
+        line-height: 1.8rem;
+        color: white;
+      }
+    }
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1.8rem 0 0 1rem;
+    @include sp {
+      flex-direction: column;
+    }
+  }
+  &__input-text {
+    display: block;
+    margin-top: 1rem;
+    border: 1px solid $color-black;
+    width: 100%;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .004em;
+    line-height: 4rem;
+    color: $color-black;
+  }
+  &__input-textarea {
+    display: block;
+    margin-top: 1rem;
+    border: 1px solid $color-black;
+    width: 100%;
+    height: 21.2rem;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .004em;
+    line-height: 2rem;
+  }
+}
+
+.kind-list {
+  &__item {
+    padding-right: 5rem;
+    @include sp {
+      padding-bottom: 1.4rem;
+    }
+  }
+  &__radio {
+    width: 2rem;
+    height: 2rem;
+  }
+  &__label {
+    padding-left: 1rem;
+    vertical-align: middle;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .004em;
+    color: $color-black;
+  }
+}
+
+.privacy-policy {
+  width: 100%;
+  &__title {
+    font-family: $font-family;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: .004;
+    color: $color-black;
+  }
+  &__text {
+    width: 100%;
+    height: 25.2rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 0;
+    border: 1px solid $color-black;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .004;
+    line-height: 2.4rem;
+    overflow: scroll;
+  }
+  &__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 4.2rem;; 
+  }
+  &__checkbox {
+    width: 2rem;
+    height: 2rem;
+  }
+  &__label {
+    padding-left: 1rem;
+    vertical-align: middle;
+    font-family: $font-family-about;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .004em;
+    line-height: 2rem;
+    color: $color-black;
+  }
+}

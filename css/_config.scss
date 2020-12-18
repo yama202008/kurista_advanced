@@ -1,0 +1,104 @@
+/* htmlの基底フォントサイズを10pxに ===============*/
+html {
+  font-size: 62.5%; /* -> 10px; */
+}
+
+/* 主要な色 ======================================*/
+$color-black:#333333;
+$color-gray-bg:#F0F0F0;
+
+/* フォント =====================================*/
+// 英文フォント,和文フォントで指定しておくことで
+// 英文フォントに和文フォントはないため、自動的に和文フォントになる
+$font-family: 'Montserrat', '游ゴシック', 'Yu Gothic', sans-serif;
+$font-family-about: 'Noto Serif JP', sans-serif;
+
+/* 主要な幅 ====================================*/
+// メディアクエリ用
+$xs: 54.4rem; 
+$sm: 76.8rem;
+$md: 99.2rem;
+$lg: 120rem;
+
+// PCサイズ =================*/
+// 内包するコンテンツの最大幅
+$max-width-pc:110rem; 
+
+// tabサイズ =================*/
+$padding-tab:3rem;
+
+// spサイズ =================*/
+$padding-sp:1.5rem;
+
+
+/* レスポンシブル ==================================*/
+// tablet サイズ
+@mixin tab {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+// smart phone サイズ
+@mixin sp {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}
+
+/* 文字スタイル ========================================*/
+// paddingなど構成に影響する要素は入れない
+
+// セクションタイトル
+@mixin title {
+  font-family: $font-family;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  // line-height: 3.9rem;
+  color: $color-black;
+  @include sp {
+    font-size: 2.8rem;
+  }
+}
+
+// 長体スタイル
+@mixin long-style {
+  box-sizing: content-box;
+  transform: scale(0.88, 1);
+  transform-origin: top left;
+  width: 105%;
+}
+
+/* リンクボタン ========================================*/
+
+// 共通の背景色黒、文字色白のボタン
+// font-sizeが設置場所によって異なるので、引数とする
+@mixin btn-black($font-size) {
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+}
+
+/* その他クラス ==========================================*/
+// ポップアップ等表示中に裏側の要素をスクロールロックする
+.scroll-lock {
+	overflow: hidden;
+}
+
+// ハンバーガーメニューの線色を黒にする
+.hamburger-black {
+  background-color: rgba($color: #fff, $alpha: 0);
+  &::after {
+    transform: translateY(.5rem) rotate(-45deg);
+  }
+  &::before {
+    transform: translateY(-.5rem) rotate(45deg);
+  }
+}

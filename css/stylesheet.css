@@ -1,0 +1,2062 @@
+@charset "UTF-8";
+/*! destyle.css v1.0.15 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model */
+/* ============================================ */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content */
+/* ============================================ */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+  vertical-align: bottom;
+}
+
+embed,
+object,
+iframe {
+  border: 0;
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 0;
+  text-align: inherit;
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+       appearance: checkbox;
+}
+
+[type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+       appearance: radio;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+button[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove arrow in IE10 & IE11
+ */
+select::-ms-expand {
+  display: none;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type="search"] {
+  outline-offset: -2px;
+  /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable] {
+  outline: none;
+}
+
+/* Table */
+/* ============================================ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Misc */
+/* ============================================ */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* htmlの基底フォントサイズを10pxに ===============*/
+html {
+  font-size: 62.5%;
+  /* -> 10px; */
+}
+
+/* 主要な色 ======================================*/
+/* フォント =====================================*/
+/* 主要な幅 ====================================*/
+/* レスポンシブル ==================================*/
+/* 文字スタイル ========================================*/
+/* リンクボタン ========================================*/
+/* その他クラス ==========================================*/
+.scroll-lock {
+  overflow: hidden;
+}
+
+.hamburger-black {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.hamburger-black::after {
+  -webkit-transform: translateY(0.5rem) rotate(-45deg);
+          transform: translateY(0.5rem) rotate(-45deg);
+}
+
+.hamburger-black::before {
+  -webkit-transform: translateY(-0.5rem) rotate(45deg);
+          transform: translateY(-0.5rem) rotate(45deg);
+}
+
+/* 全ページ共通デザイン =================================================/
+/* header ====================================*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 70;
+}
+
+.header__left {
+  position: absolute;
+  top: 3rem;
+  left: 5.8rem;
+  width: 26rem;
+  z-index: 50;
+  fill: black;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .header__left {
+    left: 3rem;
+    width: 19rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .header__left {
+    left: 1.5rem;
+  }
+}
+
+.header__right {
+  position: absolute;
+  top: 3rem;
+  right: 5.8rem;
+  z-index: 100;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .header__right {
+    right: 3rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .header__right {
+    right: 1.5rem;
+  }
+}
+
+.header__menu:hover {
+  cursor: pointer;
+}
+
+.header__hamburger {
+  position: relative;
+}
+
+.header__hamburger-top {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0rem;
+  left: -3rem;
+  width: 2.2rem;
+  height: .2rem;
+  background-color: white;
+  border-radius: .1rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__hamburger-middle {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: .5rem;
+  left: -3rem;
+  width: 2.2rem;
+  height: .2rem;
+  background-color: white;
+  border-radius: .1rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__hamburger-bottom {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: -3rem;
+  width: 2.2rem;
+  height: .2rem;
+  background-color: white;
+  border-radius: .1rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__hamburger-text {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .005em;
+  color: white;
+}
+
+.is-active-top {
+  -webkit-transform: translateY(0.5rem) rotate(-45deg);
+          transform: translateY(0.5rem) rotate(-45deg);
+}
+
+.is-active-middle {
+  display: none;
+}
+
+.is-active-bottom {
+  -webkit-transform: translateY(-0.5rem) rotate(45deg);
+          transform: translateY(-0.5rem) rotate(45deg);
+}
+
+.hamburger-background {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.6);
+  z-index: 50;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 52rem;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.95);
+  z-index: 90;
+  text-align: center;
+}
+
+.hamburger-menu__icon {
+  margin-top: 18.2rem;
+  margin-bottom: 4rem;
+}
+
+.hamburger-menu__list {
+  text-align: center;
+}
+
+.hamburger-menu__item {
+  padding-bottom: 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: white;
+}
+
+/* footer =====================================*/
+.footer {
+  background-color: #525252;
+}
+
+.footer__text {
+  text-align: center;
+  padding: 1.8rem 0;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .015em;
+  color: white;
+}
+
+/* トップページのデザイン =================================================/
+/* fv =========================================*/
+.fv {
+  height: 100vh;
+}
+
+.fv-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fv-bg__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 86%;
+  z-index: 50;
+  content: '';
+  background-image: url("../img/kv-img@2x-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .fv-bg__img {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .fv-bg__img {
+    width: 76%;
+  }
+}
+
+.fv-bg__color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  width: 54%;
+  height: 100%;
+  content: '';
+  background-color: #222;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .fv-bg__color {
+    width: 73%;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .fv-bg__color {
+    width: 75%;
+  }
+}
+
+.fv-main-copy {
+  position: absolute;
+  top: 16rem;
+  right: 20rem;
+  z-index: 60;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .fv-main-copy {
+    top: 26%;
+    right: 8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .fv-main-copy {
+    top: 26%;
+    right: 2rem;
+  }
+}
+
+.fv-main-copy__sub {
+  padding-bottom: 1rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .fv-main-copy__sub {
+    font-size: 1.6rem;
+    letter-spacing: .063rem;
+  }
+}
+
+.fv-main-copy__main {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 7.2rem;
+  font-weight: 800;
+  letter-spacing: 0em;
+  line-height: 8.6rem;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .fv-main-copy__main {
+    font-size: 5.6rem;
+    letter-spacing: .063em;
+    line-height: 5.3rem;
+  }
+}
+
+/* about =========================================*/
+.about {
+  width: 100%;
+  padding-top: 12rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about {
+    padding-top: 8rem;
+  }
+}
+
+.about__bg {
+  position: relative;
+  content: '';
+  max-width: 110rem;
+  height: 60rem;
+  margin: 0 auto;
+  background-image: url("../img/about-img@2x-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about__bg {
+    max-width: none;
+    height: 48rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about__bg {
+    height: 54rem;
+    padding-top: 5rem;
+  }
+}
+
+.about__content {
+  position: absolute;
+  width: 59rem;
+  top: 11rem;
+  left: 5rem;
+  background-color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about__content {
+    top: 8rem;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about__content {
+    position: static;
+    width: auto;
+    -webkit-transform: none;
+            transform: none;
+    margin: 0 1.5rem;
+  }
+}
+
+.about-content__title {
+  padding: 5rem 0 3rem 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-content__title {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-content__title {
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-content__title {
+    padding-top: 5rem;
+  }
+}
+
+.about-content__text {
+  padding: 0 3rem 5.4rem;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 3.2rem;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-content__text {
+    padding-bottom: 8rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.about-content__btn {
+  margin: 0 0 5rem 3rem;
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-content__btn {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-content__btn {
+    margin-bottom: 5rem;
+  }
+}
+
+/* worksとcultureにまたがるwrapper ==============*/
+.over-section-wrapper {
+  width: 100%;
+  margin-top: -10rem;
+  padding-top: 18rem;
+  background-color: #F0F0F0;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .over-section-wrapper {
+    margin-top: 0;
+    padding-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .over-section-wrapper {
+    padding-top: 4rem;
+  }
+}
+
+.over-section-wrapper__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .over-section-wrapper__flex {
+    display: block;
+    margin: 0;
+  }
+}
+
+/* works =======================================*/
+.works {
+  width: 47%;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .works {
+    width: 100%;
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .works {
+    padding: 0 1.5rem;
+  }
+}
+
+.works__title {
+  padding-bottom: 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .works__title {
+    font-size: 2.8rem;
+  }
+}
+
+.works__img {
+  width: 100%;
+  max-width: 52rem;
+}
+
+.works__text {
+  padding: 2.8rem 0;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  color: #333333;
+}
+
+.works__btn {
+  margin-bottom: 6rem;
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .works__btn {
+    margin-bottom: 8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .works__btn {
+    margin-bottom: 4rem;
+  }
+}
+
+/* culture =======================================*/
+.culture {
+  width: 47%;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .culture {
+    width: 100%;
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .culture {
+    padding: 0 1.5rem;
+  }
+}
+
+.culture__title {
+  padding-bottom: 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .culture__title {
+    font-size: 2.8rem;
+  }
+}
+
+.culture__img {
+  width: 100%;
+  max-width: 52rem;
+}
+
+.culture__text {
+  padding: 2.8rem 0;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  color: #333333;
+}
+
+.culture__btn {
+  margin-bottom: 6rem;
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .culture__btn {
+    margin-bottom: 8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .culture__btn {
+    margin-bottom: 4rem;
+  }
+}
+
+/* latest topics ==================================*/
+.latest-topics {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .latest-topics {
+    margin: 0;
+    padding: 4rem 3rem 0;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .latest-topics {
+    padding: 4rem 1.5rem 0;
+  }
+}
+
+.latest-topics__title {
+  padding-bottom: 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .latest-topics__title {
+    font-size: 2.8rem;
+  }
+}
+
+.latest-topics__list {
+  width: 70rem;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .latest-topics__list {
+    width: 100%;
+  }
+}
+
+.latest-topics__item {
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 3rem;
+}
+
+.latest-topics__date {
+  padding-bottom: .9rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: #CECECE;
+}
+
+.latest-topics__topic-title {
+  padding-bottom: 1rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: .004em;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .latest-topics__topic-title {
+    font-size: 1.2rem;
+    letter-spacing: .068em;
+  }
+}
+
+.latest-topics__btn {
+  display: block;
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+  margin: 0 0 6rem auto;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .latest-topics__btn {
+    margin: 0 0 4rem;
+  }
+}
+
+/* contact =======================================*/
+.contact {
+  padding-top: 6rem;
+  background-color: #F0F0F0;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact {
+    padding: 4rem 0 0 3rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact {
+    padding: 4rem 1.5rem 0;
+  }
+}
+
+.contact__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding-bottom: 12rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 58rem;
+    margin: 0;
+    padding-bottom: 8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact__flex {
+    padding-bottom: 4rem;
+  }
+}
+
+.contact__content {
+  width: 40%;
+  padding-top: 7.2rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact__content {
+    width: 100%;
+    max-width: 52rem;
+    padding-top: 3rem;
+  }
+}
+
+.contact__title {
+  padding-bottom: 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact__title {
+    font-size: 2.8rem;
+  }
+}
+
+.contact__text {
+  padding-bottom: 6rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 3.2rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact__text {
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact__text {
+    padding-bottom: 6rem;
+  }
+}
+
+.contact__btn {
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+}
+
+.contact__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact__img {
+    max-width: 52rem;
+  }
+}
+
+/* Aboutページのデザイン =================================================*/
+/* about fv =======================================*/
+.about-fv {
+  height: 46.4rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-fv {
+    height: 61.5rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-fv {
+    height: 44.9rem;
+  }
+}
+
+.about-fv-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about-fv-bg__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 86%;
+  z-index: 50;
+  content: '';
+  background-image: url("../img/heading-img@2x-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-fv-bg__img {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-fv-bg__img {
+    width: 76%;
+  }
+}
+
+.about-fv-bg__color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  width: 54%;
+  height: 100%;
+  content: '';
+  background-color: #222;
+}
+
+.about-fv-main-copy {
+  position: absolute;
+  top: 16rem;
+  right: 17rem;
+  z-index: 60;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-fv-main-copy {
+    top: 22rem;
+    right: 9.8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .about-fv-main-copy {
+    top: 15rem;
+    right: 3rem;
+  }
+}
+
+.about-fv-main-copy__main {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 7.2rem;
+  font-weight: 800;
+  letter-spacing: 0em;
+  line-height: 8.6rem;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-fv-main-copy__main {
+    font-size: 5.2rem;
+    letter-spacing: .063em;
+  }
+}
+
+.about-fv-main-copy__sub {
+  padding-bottom: 1rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .about-fv-main-copy__sub {
+    font-size: 1.6rem;
+  }
+}
+
+/* vision =======================================*/
+.vision {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 12rem 0 0 22.2rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .vision {
+    padding: 8rem 0 0 15rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .vision {
+    padding: 8rem 1.5rem 0;
+  }
+}
+
+.vision__title {
+  padding-bottom: 2.5rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .vision__title {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .vision__title {
+    padding-bottom: 3.2rem;
+  }
+}
+
+.vision__text-big {
+  padding-bottom: 2.7rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: .005em;
+  color: #333333;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .vision__text-big {
+    padding-bottom: 3.2rem;
+    font-weight: 400;
+  }
+}
+
+.vision__text {
+  padding-bottom: 12rem;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 3.2rem;
+  color: #333333;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .vision__text {
+    padding-bottom: 8rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+/* ceo message =======================================*/
+.ceo-message {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .ceo-message {
+    margin: 0;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .ceo-message {
+    padding: 0;
+  }
+}
+
+.ceo-message__img {
+  width: 42rem;
+  z-index: 80;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .ceo-message__img {
+    width: 32rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .ceo-message__img {
+    width: auto;
+    margin-right: 3.5rem;
+  }
+}
+
+.ceo-message__content {
+  z-index: 50;
+  margin: -13.8rem 0 0 33rem;
+  padding: 12rem 18.5rem 0;
+  background-color: #F0F0F0;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .ceo-message__content {
+    margin: -8.5rem 0 0 21.3rem;
+    padding: 10.9rem 4rem 0;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .ceo-message__content {
+    margin: -10rem 1.5rem 0;
+    padding: 12.6rem 3rem 0;
+  }
+}
+
+.ceo-message__title {
+  padding-bottom: 3rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .ceo-message__title {
+    font-size: 2.8rem;
+  }
+}
+
+.ceo-message__text {
+  padding-bottom: 9rem;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 3.2rem;
+  color: #333333;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .ceo-message__text {
+    line-height: 2.8rem;
+    padding-bottom: 7.8rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .ceo-message__text {
+    padding-bottom: 19rem;
+  }
+}
+
+/* company =======================================*/
+.company {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding-top: 12rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .company {
+    padding: 8.2rem 3rem 0;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .company {
+    padding: 8.2rem 1.5rem 0;
+  }
+}
+
+.company__title {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #DDDDDD;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: .068em;
+  color: #333333;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .company__title {
+    font-size: 2.8rem;
+  }
+}
+
+.company__text {
+  width: 72%;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .company__text {
+    width: auto;
+    padding-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .company__text {
+    padding-left: 0;
+  }
+}
+
+.company-info {
+  padding-bottom: 4rem;
+}
+
+.company-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.7rem 0 1.8rem 0;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.company-info__field {
+  width: 20%;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: .004em;
+  color: #333333;
+}
+
+.company-info__record {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: .004em;
+  color: #333333;
+}
+
+.company-info__map {
+  padding-bottom: 12rem;
+}
+
+.company-info__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .company-info__img {
+    height: 47rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 60% 50%;
+       object-position: 60% 50%;
+  }
+}
+
+/* Contactページのデザイン ==============================================*/
+/* contact fv =======================================*/
+.contact-fv {
+  height: 46.4rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-fv {
+    height: 61.5rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact-fv {
+    height: 36.5rem;
+  }
+}
+
+.contact-fv-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-fv-bg__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 38.7rem;
+  z-index: 50;
+  content: '';
+  background-image: url("../img/heading-img_contact@2x-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-fv-bg__img {
+    width: 78%;
+    height: 52.9rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact-fv-bg__img {
+    width: 76%;
+    height: 27rem;
+  }
+}
+
+.contact-fv-bg__color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  width: 54%;
+  height: 100%;
+  content: '';
+  background-color: #222;
+}
+
+.contact-fv-main-copy {
+  position: absolute;
+  top: 16rem;
+  right: 17rem;
+  z-index: 60;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-fv-main-copy {
+    top: 13rem;
+    right: 5rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact-fv-main-copy {
+    top: 12.9rem;
+    right: 2.1rem;
+  }
+}
+
+.contact-fv-main-copy__main {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 7.2rem;
+  font-weight: 800;
+  letter-spacing: 0em;
+  line-height: 8.6rem;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-fv-main-copy__main {
+    font-size: 5.2rem;
+    letter-spacing: .063em;
+  }
+}
+
+.contact-fv-main-copy__sub {
+  padding-bottom: 1rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-fv-main-copy__sub {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact-fv-main-copy__sub {
+    text-align: right;
+  }
+}
+
+/* contact form ======================*/
+.contact-form {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-top: 12rem;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-form {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    padding: 13.5rem 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact-form {
+    padding-top: 8rem;
+  }
+}
+
+.contact-form__intro {
+  padding-bottom: 5.2rem;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  line-height: 2.4rem;
+  color: #333333;
+}
+
+.contact-form__btn {
+  display: block;
+  margin: 0 auto 12rem;
+  width: 16rem;
+  height: 3.6rem;
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: .015em;
+  color: white;
+}
+
+@media screen and (max-width: 76.8rem) {
+  .contact-form__btn {
+    margin-bottom: 19.7rem;
+  }
+}
+
+@media screen and (max-width: 54.4rem) {
+  .contact-form__btn {
+    margin-bottom: 8rem;
+  }
+}
+
+.form-list__item {
+  padding-bottom: 3.7rem;
+}
+
+.form-list__label {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  color: #333333;
+}
+
+.form-list__label--must {
+  position: relative;
+  vertical-align: middle;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  color: #333333;
+}
+
+.form-list__label--must::after {
+  content: '必須';
+  display: inline-block;
+  position: absolute;
+  width: 3.4rem;
+  height: 1.8rem;
+  margin-left: 2rem;
+  background-color: #333333;
+  text-align-last: center;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  line-height: 1.8rem;
+  color: white;
+}
+
+.form-list__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 1.8rem 0 0 1rem;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .form-list__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.form-list__input-text {
+  display: block;
+  margin-top: 1rem;
+  border: 1px solid #333333;
+  width: 100%;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  line-height: 4rem;
+  color: #333333;
+}
+
+.form-list__input-textarea {
+  display: block;
+  margin-top: 1rem;
+  border: 1px solid #333333;
+  width: 100%;
+  height: 21.2rem;
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  line-height: 2rem;
+}
+
+.kind-list__item {
+  padding-right: 5rem;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .kind-list__item {
+    padding-bottom: 1.4rem;
+  }
+}
+
+.kind-list__radio {
+  width: 2rem;
+  height: 2rem;
+}
+
+.kind-list__label {
+  padding-left: 1rem;
+  vertical-align: middle;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: .004em;
+  color: #333333;
+}
+
+.privacy-policy {
+  width: 100%;
+}
+
+.privacy-policy__title {
+  font-family: "Montserrat", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: .004;
+  color: #333333;
+}
+
+.privacy-policy__text {
+  width: 100%;
+  height: 25.2rem;
+  margin-top: 1rem;
+  padding: 1rem 1rem 0;
+  border: 1px solid #333333;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004;
+  line-height: 2.4rem;
+  overflow: scroll;
+}
+
+.privacy-policy__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 4.2rem;
+}
+
+.privacy-policy__checkbox {
+  width: 2rem;
+  height: 2rem;
+}
+
+.privacy-policy__label {
+  padding-left: 1rem;
+  vertical-align: middle;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .004em;
+  line-height: 2rem;
+  color: #333333;
+}
+/*# sourceMappingURL=stylesheet.css.map */
