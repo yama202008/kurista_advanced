@@ -102,3 +102,46 @@ $padding-sp:1.5rem;
     transform: translateY(-.5rem) rotate(45deg);
   }
 }
+
+// クリスタさんリンク
+.presented {
+  position: absolute;
+  top: 10rem;
+  text-align: center;
+	left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 60;
+  @include sp {
+    top: 10rem;
+  }
+  &__text {
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    color: white;
+    white-space: nowrap;
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 1rem;
+    border-radius: 20rem;
+    background-color: #ECA359;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    &:hover {
+      opacity: .8;
+    }
+    @include sp {
+      font-size: 1.6rem;
+    }
+  }
+  &__br {
+    display: none;
+    @include sp {
+      display: block;
+    }
+  }
+}

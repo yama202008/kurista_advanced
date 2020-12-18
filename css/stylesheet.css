@@ -509,6 +509,65 @@ html {
           transform: translateY(-0.5rem) rotate(45deg);
 }
 
+.presented {
+  position: absolute;
+  top: 10rem;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 60;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .presented {
+    top: 10rem;
+  }
+}
+
+.presented__text {
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  color: white;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .presented__text {
+    font-size: 1.4rem;
+  }
+}
+
+.presented__link {
+  display: block;
+  padding: 1rem;
+  border-radius: 20rem;
+  background-color: #ECA359;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.presented__link:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .presented__link {
+    font-size: 1.6rem;
+  }
+}
+
+.presented__br {
+  display: none;
+}
+
+@media screen and (max-width: 54.4rem) {
+  .presented__br {
+    display: block;
+  }
+}
+
 /* 全ページ共通デザイン =================================================/
 /* header ====================================*/
 .header {
